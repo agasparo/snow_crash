@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level00</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Level00</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Level00</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">aller a la racine de la vm pour voir ce qu'il y a : </p>
+			<p class="lead">commande : cd /</p>
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">regarder les doits sur chaques dossiers :</p>
+			<p class="lead">commande : ls -la</p>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">regarder le fichier /etc/passwd :</p>
+			<p class="lead">commande : cat /etc/passwd</p>
+			<p class="lead">On peut voir qu'il y a un x au niveau du password de flag00 cela veut dire qu'il est crypté dans le fichier /etc/shadow</p>
+			<img src="img/etape3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">regarder les droits du fichier /etc/shadow :</p>
+			<p class="lead">commande : ls -l /etc/passwd</p>
+			<p class="lead">On peut voir que l'on a pas les droits sur le fichier donc on vas utiliser une autre méthode</p>
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">utiliser la commande find pour chercher les fichiers appartenant a flag00</p>
+			<p class="lead">commande : find / -user flag00 -group flag00 (-user : pour préciser l'utilisateur et -group pour préciser le group)</p>
+			<p class="lead">On peut voir 2 fichiers ou l'on a les droits dessus : /usr/sbin/john et /rofs/usr/sbin/john</p>
+			<img src="img/etape5.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">Lire les fichiers</p>
+			<p class="lead">in : cdiiddwpgswtgt</p>
+			<img src="img/etape6.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 7.1 : </h5>
+			<p class="lead">Décrypter le mot de passe (ce n'est ni du sha ni du md5 donc en autre possibilité il reste le ROT)</p>
+			<p class="lead">Faire le code </p>
+			<img src="img/code.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 7.2 : </h5>
+			<p class="lead">Afficher toutes le possibilitées</p>
+			<img src="img/etape7.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 8 : </h5>
+			<p class="lead">Tester</p>
+			<p class="lead">Bon mot de passe : nottoohardhere</p>
+			<img src="img/etape8.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 9 : </h5>
+			<p class="lead">Recuperer le flag</p>
+			<p class="lead">getflag</p>
+			<img src="img/etape9.png" class="mt-4 om">
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>
