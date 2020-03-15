@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level01</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Level01</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Level01</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">aller a la racine de la vm pour voir ce qu'il y a : </p>
+			<p class="lead">commande : cd /</p>
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">regarder les doits sur chaques dossiers :</p>
+			<p class="lead">commande : ls -la</p>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">regarder le fichier /etc/passwd :</p>
+			<p class="lead">commande : cat /etc/passwd</p>
+			<p class="lead">On peut voir qu'il y a un mot de passe au niveau du password de flag01 cela veut dire qu'il est crypté par le fonction crypt d'ubuntu</p>
+			<img src="img/etape3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">installer un nouvel OS</p>
+			<p class="lead">
+				Télécharger kali linux ou ubuntu ou debian (a votre choix) et l'installer sur virtualbox<br><br>
+				<a href="https://cdimage.kali.org/kali-2020.1/kali-linux-2020.1a-installer-amd64.iso">kali linux</a><br>
+				<a href="https://ubuntu.com/download/desktop/thank-you?version=18.04.4&architecture=amd64">ubuntu</a><br>
+				<a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.3.0-amd64-netinst.iso">debian</a>
+			</p>
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">installer john the ripper</p>
+			<p class="lead">commande : apt-get install john</p>
+			<img src="img/etape5.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">copier le fichier /etc/passwd sur le nouvel OS</p>
+			<p class="lead">commande : scp -P 4242 level01@ip:/etc/passwd .</p>
+			<img src="img/etape6.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 7 : </h5>
+			<p class="lead">Cracker le mot de passe</p>
+			<p class="lead">commande : john -user=flag01 ./passwd</p>
+			<img src="img/etape7.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 8 : </h5>
+			<p class="lead">Tester le mot de passe trouve</p>
+			<p class="lead">mot de passe : abcdefg</p>
+			<img src="img/etape8.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 9 : </h5>
+			<p class="lead">Recuperer le flag</p>
+			<p class="lead">getflag</p>
+			<img src="img/etape9.png" class="mt-4 om">
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>
