@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level02</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Level02</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Level02</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">Regarder les fichiers dans le home de l'utilisateur</p>
+			<p class="lead">commande : ls -la</p>
+			<p class="lead">on peut voir un fichier level02.pcap</p>
+			<img src="img/etape1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">principe du fichier pcap</p>
+			<p class="lead">Le .pcap extension de fichier est principalement associée avec Wireshark;<br>un programme utilisé pour l'analyse de réseaux.<br>.pcap fichiers sont des fichiers de données créés en utilisant le programme et ils contiennent les données en paquets d'un réseau.</p>
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">installation de Wireshark sur la vm précédament créée</p>
+			<p class="lead">commande : apt install wireshark</p>
+			<img src="img/etape3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">copier le fichier sur le nouvel OS</p>
+			<p class="lead">commande : scp -P 4242 level02@ip:~/level02.pcap .</p>
+			<img src="img/etape4.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">lancer wiresark</p>
+			<img src="img/etape5.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">Regarder le contenu des paquets</p>
+			<p class="lead">sur le 43 eme il y a password</p>
+			<img src="img/etape6.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 7 : </h5>
+			<p class="lead">Faire click droit sur la ligne 43 puis suivre puis tcp</p>
+			<img src="img/etape7.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 8 : </h5>
+			<p class="lead">Le mot de passe est : Password: ft_wandr...NDRel.L0L</p>
+			<p class="lead">en gardant que l'ascii on obtient : ft_wandrNDRelL0L</p>
+			<p class="lead">en enlevent avec le caract del : ft_waNDReL0L</p>
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 9 : </h5>
+			<p class="lead">Recuperer le flag</p>
+			<p class="lead">getflag</p>
+			<img src="img/etape9.png" class="mt-4 om">
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>
