@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level13</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Level13</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Level13</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">Regarder les fichiers dans le home de l'utilisateur</p>
+			<p class="lead">commande : ls -la</p>
+			<p class="lead">on peut voir un fichier Level13</p>
+			<img src="img/etape1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">on execute le programme</p>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">on voit que le programme appelle la fonction getuid et sil est pas = a 4242 on a pas le token</p>
+			<img src="img/etape3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">Onouvre level13 avec gdb qui est un debugger</p>
+			<img src="img/etape4.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">on affiche les adresses memoires des differentes etapes du main</p>
+			<p class="lead">on voit a l'adresse (0x8048380) que la fonction getuid est appeller</p>
+			<p class="lead">on voit a l'adresse ($0x1092) qu'une comparaison enytre les uid est faite</p>
+			<img src="img/etape5.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">on met un breakpoint a l'adresse : 0x8048380 (pours stopper le programme avant la comparaison)</p>
+			<p class="lead">on jump a l'adresse : 0x80485cb (qui normalement est léndroit ou vas le programme si l'uid == 4242)</p>
+			<p class="lead">on laisse le programme se finir et on a le token</p>
+			<img src="img/etape6.png" class="mt-4 om">
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>
