@@ -33,28 +33,28 @@
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 3 : </h5>
-			<p class="lead">on voit que le programme appelle la fonction getuid et sil est pas = a 4242 on a pas le token</p>
+			<p class="lead">on voit que le programme appelle la fonction getuid et s'il est pas = a 4242 on a pas le token</p>
 			<img src="img/etape3.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 4 : </h5>
-			<p class="lead">Onouvre level13 avec gdb qui est un debugger</p>
+			<p class="lead">On ouvre level13 avec gdb qui est un debugger</p>
 			<img src="img/etape4.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 5 : </h5>
 			<p class="lead">on affiche les adresses memoires des differentes etapes du main</p>
-			<p class="lead">on voit a l'adresse (0x8048380) que la fonction getuid est appeller</p>
-			<p class="lead">on voit a l'adresse ($0x1092) qu'une comparaison enytre les uid est faite</p>
+			<p class="lead">on voit a l'adresse (0x8048380) que la fonction getuid est appelle</p>
+			<p class="lead">on voit a l'adresse ($0x1092) qu'une comparaison entre les uids est faite</p>
 			<img src="img/etape5.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 6 : </h5>
-			<p class="lead">on met un breakpoint a l'adresse : 0x8048380 (pours stopper le programme avant la comparaison)</p>
-			<p class="lead">on jump a l'adresse : 0x80485cb (qui normalement est léndroit ou vas le programme si l'uid == 4242)</p>
+			<p class="lead">on met un breakpoint a l'adresse : 0x8048380 (pour stopper le programme avant la comparaison)</p>
+			<p class="lead">on jump a l'adresse : 0x80485cb (qui normalement est l'endroit ou vas le programme si l'uid == 4242)</p>
 			<p class="lead">on laisse le programme se finir et on a le token</p>
 			<img src="img/etape6.png" class="mt-4 om">
 		</div>
